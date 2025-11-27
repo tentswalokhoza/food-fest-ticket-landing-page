@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400">
+  <rect width="100%" height="100%" fill="#0b0b0b" />
+  <g transform="translate(60,40)">
+    <circle cx="120" cy="120" r="90" fill="#D4AF37" opacity="0.12" />
+    <text x="120" y="135" font-size="48" text-anchor="middle" fill="#D4AF37">🍚</text>
+    <text x="120" y="220" font-size="28" text-anchor="middle" fill="#efe6c8">Risotto</text>
+  </g>
+</svg>
