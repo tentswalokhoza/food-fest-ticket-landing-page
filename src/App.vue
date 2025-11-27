@@ -5,12 +5,33 @@ import CourseCard from './components/CourseCard.vue'
 
 const state = reactive({
   courses: [
-    { id: 1, title: 'Sourdough Basics', chef: 'Ana Rossi', level: 'Beginner', price: 49, available: true, image: '/images/sourdough.svg' },
-    { id: 2, title: 'Mastering Risotto', chef: 'Marco Leoni', level: 'Intermediate', price: 69, available: true, image: '/images/risotto.svg', featured: true },
-    { id: 3, title: 'French Pastry Secrets', chef: 'Claire Dupont', level: 'Advanced', price: 99, available: false, image: '/images/pastry.svg' },
-    { id: 4, title: 'Vegan Comfort Classics', chef: 'Sam Patel', level: 'Beginner', price: 39, available: true, image: '/images/vegan.svg' },
-    { id: 5, title: 'Seafood on Fire', chef: 'Liu Wei', level: 'Advanced', price: 119, available: false, image: '/images/seafood.svg' },
-    { id: 6, title: 'Weeknight Pasta', chef: 'Giulia Ferri', level: 'Intermediate', price: 59, available: true, image: '/images/pasta.svg' }
+    {
+      id: 1,
+      title: 'Bronze Ticket',
+      price: 199,
+      benefits: ['General admission', 'Access to food stalls', 'Live music in the park'],
+      available: true,
+      featured: false,
+      image: '/images/bronze.svg'
+    },
+    {
+      id: 2,
+      title: 'Silver Ticket',
+      price: 349,
+      benefits: ['Priority entry', '2 drink vouchers', 'Reserved seating area'],
+      available: true,
+      featured: false,
+      image: '/images/silver.svg'
+    },
+    {
+      id: 3,
+      title: 'Gold Ticket',
+      price: 599,
+      benefits: ['VIP lounge access', 'Meet & greet with chefs', 'Dedicated concierge'],
+      available: true,
+      featured: true,
+      image: '/images/gold.svg'
+    }
   ],
   wishlist: new Set()
 })
@@ -50,8 +71,8 @@ function formatPrice(value) {
 
     <main>
       <section class="intro">
-        <h1>Cooking Masterclass — Course Catalogue</h1>
-        <p class="lead">Discover curated workshops from experienced chefs. Save classes you like to your wishlist.</p>
+        <h1>Cape Town Food Fest — Tickets</h1>
+        <p class="lead">Choose your ticket tier for the Cape Town Food Fest. Favourite tiers to save them to your list.</p>
       </section>
 
       <section class="filters">
@@ -73,7 +94,7 @@ function formatPrice(value) {
 
         <div class="filter-group search">
           <label for="q">Search</label>
-          <input id="q" v-model="filters.q" placeholder="Search title or chef" />
+          <input id="q" v-model="filters.q" placeholder="Search type of ticket" />
         </div>
       </section>
 

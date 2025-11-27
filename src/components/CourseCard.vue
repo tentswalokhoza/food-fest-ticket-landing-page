@@ -9,13 +9,17 @@
 
     <div class="content">
       <h3 class="title">{{ course.title }}</h3>
-      <p class="meta">By <strong>{{ course.chef }}</strong> • <span class="level">{{ course.level }}</span></p>
+      <p class="meta"> <span class="level">{{ course.price ? formatPrice(course.price) : '' }}</span></p>
+      <ul class="benefits">
+        <li v-for="(b, i) in course.benefits" :key="i">{{ b }}</li>
+      </ul>
       <div class="actions">
         <div class="price">{{ formatPrice(course.price) }}</div>
         <button class="save" :class="{ saved }" @click="$emit('toggle-save', course.id)">
           <span v-if="saved">✓ Saved</span>
           <span v-else>♡ Save</span>
         </button>
+        <button class="cta">Notify Me</button>
       </div>
     </div>
   </article>
@@ -79,11 +83,14 @@ defineProps({
 .title { font-size: 1.05rem; margin:0; color: var(--color-heading) }
 .meta { color: var(--color-text-muted); font-size: 0.9rem }
 .level { background: rgba(212,175,55,0.08); color: var(--brand-gold); padding: 2px 6px; border-radius: 6px; font-size:0.8rem }
+.benefits { margin:0; padding-left:1rem; color: var(--color-text); font-size:0.9rem }
+.benefits li { margin:0.25rem 0 }
 
 .actions { display:flex; align-items:center; justify-content:space-between; margin-top:0.5rem }
 .price { font-weight:700; color: var(--brand-gold) }
 .save { border:0; background:transparent; cursor:pointer; padding:6px 10px; border-radius:8px; color: var(--color-text) }
 .save.saved { color: var(--brand-gold); font-weight:700 }
+.cta { background: var(--brand-gold); color: #0b0b0b; border: none; padding:6px 10px; border-radius:8px; cursor:pointer; font-weight:700 }
 
 .media.sold-out { filter: grayscale(60%); opacity: 0.95 }
 

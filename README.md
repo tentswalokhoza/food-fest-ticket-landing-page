@@ -1,16 +1,16 @@
-# cooking-masterclass-catalogue
+# food-fest-ticket-landing-page
 
-Simple Vue 3 + Vite catalogue prototype for the "Cooking Masterclass" project.
+Cape Town Food Fest — Ticket landing page built with Vue 3 + Vite.
 
 Overview
-- Single-page app that displays a catalogue of cooking workshops.
-- Users can save courses to a wishlist and see the wishlist count in the header.
+- Single-page landing displaying ticket tiers (Bronze, Silver, Gold).
+- Users can favourite tiers and see the wishlist count in the header.
 
 Features
-- Course cards rendered from local data (no API)
-- 'Sold Out' badge for unavailable classes
-- Save/unsave to wishlist with counter in the header
-- Responsive grid layout
+- Ticket cards rendered from local data (no API)
+- Featured tier (Gold) is visually highlighted
+- Favourite (save) interaction with header count
+- Responsive layout for mobile and desktop
 
 Run locally
 1. Install dependencies
@@ -33,7 +33,7 @@ npm run build
 
 Notes
 - Project files are under `src/`.
-- Main components added: `src/components/CourseCard.vue`, `src/components/HeaderWishlist.vue`.
-- This repository is intended to be renamed to `cooking-masterclass-catalogue` before publishing.
+- Main components: `src/components/CourseCard.vue`, `src/components/HeaderWishlist.vue`.
+- Images are in `public/images`.
 
-If you'd like, I can add a screenshot file and polish styles further (animations, filters, etc.).
+If you want, I can add a screenshot file and polish interactions (animations, persistence, or CTA buttons).

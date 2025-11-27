@@ -1,9 +1,9 @@
 <template>
   <header class="site-header">
     <div class="brand">
-      <h2>Cooking Masterclass</h2>
-      <p class="tag">Curated workshops from expert chefs</p>
-    </div>
+        <h2>Cape Town Food Fest</h2>
+        <p class="tag">Annual food festival · Tickets & experiences</p>
+      </div>
 
     <div class="wishlist">
       <button class="wish-btn" aria-label="View wishlist">
